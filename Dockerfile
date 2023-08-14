@@ -1,4 +1,4 @@
-FROM gcr.io/google-containers/python:3.5.1-alpine
+FROM gcr.io/deeplearning-platform-release/base-cpu:latest
 WORKDIR /
 
 COPY trainer /trainer
