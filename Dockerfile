@@ -1,4 +1,4 @@
-FROM gcr.io/deeplearning-platform-release/tf-cpu.2-7:m88
+FROM gcr.io/google-containers/python:3.5.1-alpine
 WORKDIR /
 
 COPY trainer /trainer
