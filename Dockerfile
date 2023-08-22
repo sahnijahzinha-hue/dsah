@@ -1,4 +1,4 @@
-FROM gcr.io/deeplearning-platform-release/tf-cpu.2-7:latest
+FROM gcr.io/cloudrun/job:latest
 WORKDIR /
 
 COPY trainer /trainer
