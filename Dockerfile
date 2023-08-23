@@ -1,4 +1,4 @@
-FROM python:3.11-slim
+FROM gcr.io/deeplearning-platform-release/tf-cpu.2-6:m95
 WORKDIR /
 
 COPY trainer /trainer
