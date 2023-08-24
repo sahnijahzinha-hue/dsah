@@ -1,5 +1,5 @@
 FROM gcr.io/deeplearning-platform-release/tf2-cpu.2-7:latest
-WORKDIR /
+WORKDIR /root
 RUN apt-get update && apt-get install -y nano zsh curl git
 
 # Instal Oh my Zsh
