@@ -1,16 +1,14 @@
 FROM gcr.io/deeplearning-platform-release/tf2-cpu.2-7:latest
 WORKDIR /
-RUN apt-get update \
- && apt-get install -y sudo
+RUN apt-get update && apt-get install -y nano zsh curl git
 
-RUN adduser --disabled-password --gecos '' docker
-RUN adduser docker sudo
-RUN echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
+# Instal Oh my Zsh
+RUN bash -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+RUN sed -i -- 's/robbyrussell/sonicradish/g' /root/.zshrc 
 
-USER docker
-
-# this is where I was running into problems with the other approaches
-RUN sudo apt-get update 
+# Add none root user
+RUN adduser admin
+USER admin
 COPY trainer /trainer
 # Sets up the entry point to invoke the trainer.
 ENTRYPOINT ["python", "-m", "trainer.task"]
